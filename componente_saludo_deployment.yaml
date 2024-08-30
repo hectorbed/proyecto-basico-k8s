@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-saludo
+  labels:
+    app: microservicio-saludo
+spec:
+  selector:
+    matchLabels:
+      app: microservicio-saludo
+  template:
+    metadata:
+      labels:
+        app: microservicio-saludo
+    spec:
+      containers:
+        - image: 'hectorbed/microservicio-saludo:1.0'
+          name: microservicio-saludo
+          ports:
+            - containerPort: 8080
