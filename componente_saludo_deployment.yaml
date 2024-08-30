@@ -14,7 +14,7 @@ spec:
         app: microservicio-saludo
     spec:
       containers:
-        - image: 'hectorbed/microservicio-saludo:1.0'
+        - image: 'hectorbed/microservicio-saludo:c1450398d51bf8ba8d8261dd6d546a5e1c0cccc7'
           name: microservicio-saludo
           ports:
             - containerPort: 8080
