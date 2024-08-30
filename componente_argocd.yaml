@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: microservicio-saludo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/hectorbed/proyecto-basico-k8s
+    path: "."
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app
