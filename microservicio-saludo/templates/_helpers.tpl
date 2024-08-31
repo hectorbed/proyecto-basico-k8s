@@ -48,6 +48,9 @@ Selector labels
 {{- define "microservicio-saludo.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "microservicio-saludo.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/managed-by: Helm
+app.kubernetes.io/version: 1.16.0
+helm.sh/chart: {{ include "microservicio-saludo.name" . }}-0.1.0
 {{- end }}
 
 {{/*
