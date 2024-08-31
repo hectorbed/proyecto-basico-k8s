@@ -7,7 +7,7 @@ image:
   repository: hectorbed/microservicio-saludo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "26395d9f4999d7a464924e500dbe7c4e959f24fe"
+  tag: "1b2218d4dc2202a74ed5a3f87968f72e68e7b15c"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
